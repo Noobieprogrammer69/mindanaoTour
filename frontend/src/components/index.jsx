@@ -1,0 +1,5 @@
+export { default as Header } from './Header'
+export { default as Tours } from './Tours'
+export { default as TourDetails } from './TourDetails'
+export { default as Booking } from './Booking'
+export { default as Sucess } from './Sucess'
