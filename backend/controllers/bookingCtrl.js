@@ -92,8 +92,8 @@ const bookingCtrl = {
             quantity: 1,
           }
         ],
-        success_url: "/success?bookingId=${bookingId}",
-        cancel_url: "/cancel",
+        success_url: `${process.env.CLIENT_URL}/success?bookingId=${bookingId}`,
+        cancel_url: `${process.env.CLIENT_URL}/cancel`,
       });
   
       res.json({ id: session.id });
@@ -101,8 +101,7 @@ const bookingCtrl = {
       console.error('Error in getCheckoutSession:', e.message, e);
       res.status(500).json({ error: e.message });
     }
-  },
-  
+  }, 
   updateBookingStatus: async (req, res) => {
     try {
       const { id } = req.params;
