@@ -92,8 +92,8 @@ const bookingCtrl = {
             quantity: 1,
           }
         ],
-        success_url: `${process.env.CLIENT_URL}/success?bookingId=${bookingId}`,
-        cancel_url: `${process.env.CLIENT_URL}/cancel`,
+        success_url: "https://mindanaotour-7j57.onrender.com/success?bookingId=${bookingId}",
+        cancel_url: "https://mindanaotour-7j57.onrender.com/cancel",
       });
   
       res.json({ id: session.id });
