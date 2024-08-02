@@ -92,8 +92,8 @@ const bookingCtrl = {
             quantity: 1,
           }
         ],
-        success_url: "http://localhost:5000/success?bookingId=${bookingId}",
-        cancel_url: "http://localhost:5000/cancel",
+        success_url: "/success?bookingId=${bookingId}",
+        cancel_url: "/cancel",
       });
   
       res.json({ id: session.id });

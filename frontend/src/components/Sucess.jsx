@@ -11,7 +11,7 @@ const Success = () => {
     if (bookingId) {
       const updateBookingStatus = async () => {
         try {
-          await fetch(`http://localhost:5000/api/booking/updateBooking/${bookingId}`, {
+          await fetch(`/api/booking/updateBooking/${bookingId}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',

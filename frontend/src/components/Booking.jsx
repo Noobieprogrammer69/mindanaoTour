@@ -36,7 +36,7 @@ const Booking = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const bookingResponse = await fetch('http://localhost:5000/api/booking/createBooking', {
+      const bookingResponse = await fetch('/api/booking/createBooking', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const Booking = () => {
       const bookingData = await bookingResponse.json();
       const bookingId = bookingData._id;
   
-      const stripeResponse = await fetch('http://localhost:5000/api/booking/create-checkout-session', {
+      const stripeResponse = await fetch('/api/booking/create-checkout-session', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
